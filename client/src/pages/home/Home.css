@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    /* text-transform: capitalize; */
+    transition: all 0.2s linear;
+}
+.img {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("Food.jpg");
+    background-size:100%; /* Adjusted property */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+/* .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Food.jpg");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+} */
+
+.navbar{
+    display: flex;
+    color: aliceblue;
+    /* background-color:rgb(71, 67, 67); */
+}
+.left{
+    flex: 3;
+    display: flex;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    font-size: large;
+}
+.right{
+    flex:1;
+    display: flex;
+    gap: 3rem;
+    margin-top: 1.5rem;
+    color: aliceblue;
+}
+.NagAnchor{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+.body{
+    display: flex;
+    margin-top: 20rem;
+    margin-left: 5rem;
+}
+.StartButton{
+    margin-left: 10rem;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: large;
+    border-radius: .5rem;
+    padding: .3rem;
+    cursor: pointer;
+    border-color: rgb(0, 0, 0);
+    
+}
+.StartButton:hover{
+    background-color: rgb(198, 43, 0);
+    
+}
+.text{
+    font-size: xx-large;
+    border-bottom: 3px solid rgb(14, 62, 0);
+    color: rgb(255, 255, 255);
+}
+.doublequotes{
+    color: rgb(255, 255, 255);
+}
+.NagAnchor:hover{
+    color: red;
+    font-size: 1.3rem;
+    padding: .1rem;
+}
+
