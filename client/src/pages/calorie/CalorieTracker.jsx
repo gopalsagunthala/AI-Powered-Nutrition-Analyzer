@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './CalorieTracker.css'
+import Footer from '../../components/footer/Footer.jsx'
 
 const CalorieTracker = () => {
 
@@ -48,37 +50,40 @@ const CalorieTracker = () => {
   };
 
   return (
-    <div>
-      <h1>Calorie Tracker</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" value={gender} onChange={(e)=>setGender(e.target.value)} required /><br /><br />
+    <div className='entire-content'>
+      <div className='tracker-container'>
+        <h1 className='title-form'>Calorie Tracker</h1><br /><br />
+        <form onSubmit={handleSubmit} className='calorie-form'>
+          <label htmlFor="gender">Gender:</label><br />
+          <input type="text" id="gender" name="gender" value={gender} onChange={(e)=>setGender(e.target.value)} required  className='track-input'/><br />
 
-        <label htmlFor="age">Age:</label>
-        <input type="number" id="age" name="age" value={age} onChange={(e)=>setAge(e.target.value)} required /><br /><br />
+          <label htmlFor="age">Age:</label><br />
+          <input type="number" id="age" name="age" value={age} onChange={(e)=>setAge(e.target.value)} required className='track-input'/><br />
 
-        <label htmlFor="height">Height:</label>
-        <input type="number" id="height" name="height" value={height} onChange={(e)=>setHeight(e.target.value)} required /><br /><br />
+          <label htmlFor="height">Height:</label>
+          <input type="number" id="height" name="height" value={height} onChange={(e)=>setHeight(e.target.value)} required className='track-input'/><br />
 
-        <label htmlFor="weight">Weight:</label>
-        <input type="number" id="weight" name="weight" value={weight} onChange={(e)=>setWeight(e.target.value)} required /><br /><br />
+          <label htmlFor="weight">Weight:</label>
+          <input type="number" id="weight" name="weight" value={weight} onChange={(e)=>setWeight(e.target.value)} required className='track-input'/><br />
 
-        <label htmlFor="duration_of_workout">Duration of Workout:</label>
-        <input type="number" id="duration_of_workout" name="duration_of_workout" value={duration} onChange={(e)=>setDuration(e.target.value)} required /><br /><br />
+          <label htmlFor="duration_of_workout">Duration of Workout:</label>
+          <input type="number" id="duration_of_workout" name="duration_of_workout" value={duration} onChange={(e)=>setDuration(e.target.value)} required className='track-input'/><br />
 
-        <label htmlFor="heart_rate">Heart Rate:</label>
-        <input type="number" id="heart_rate" name="heart_rate" value={hrt} onChange={(e)=>setHrt(e.target.value)} required /><br /><br />
+          <label htmlFor="heart_rate">Heart Rate:</label>
+          <input type="number" id="heart_rate" name="heart_rate" value={hrt} onChange={(e)=>setHrt(e.target.value)} required className='track-input'/><br />
 
-        <label htmlFor="body_temperature">Body Temperature:</label>
-        <input type="number" id="body_temperature" name="body_temperature" value={temp} onChange={(e)=>setTemp(e.target.value)} required /><br /><br />
+          <label htmlFor="body_temperature">Body Temperature:</label>
+          <input type="number" id="body_temperature" name="body_temperature" value={temp} onChange={(e)=>setTemp(e.target.value)} required className='track-input'/><br />
 
-        <button type="submit" onClick={()=>setShowCal(true)} >Submit</button>
-      </form>
-      <br />
-      <div>
-        {showCal ? ( length>0 ? (calorie>0?<h3>Predicted Calorie : {calorie}</h3>:"Loading..."):"Please fill out all fields" ):""}
+          <button type="submit" onClick={()=>setShowCal(true)} className='submit-button'>Submit</button>
+        </form>
+        <br />
+        <div>
+          {showCal ? ( length>0 ? (calorie>0?<h3>Predicted Calorie : {calorie}</h3>:"Loading..."):"Please fill out all fields" ):""}
+        </div>
       </div>
-    </div>
+      <Footer/>
+      </div>
   );
 };
 

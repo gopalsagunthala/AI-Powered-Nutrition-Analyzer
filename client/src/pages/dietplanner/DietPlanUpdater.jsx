@@ -67,110 +67,113 @@ const DietPlanUpdater = ({prop}) => {
     
 
   return (
-    <div>
+    <div className='background'>
       {(!cancel)?<form onSubmit={handleUpdate}  >
       <br /><hr /><br />
       <div className="form-container">
       <div className='meal-column'>
-      <h3>Breakfast</h3>
+
+      <h3 className='meal-time'>Breakfast</h3>
       
       <label>Monday :</label>
-      <input type="text" value={mbreakfast} onChange={(e) => setMbreakfast(e.target.value)} />
+      <input type="text" value={mbreakfast} onChange={(e) => setMbreakfast(e.target.value)} className='in'/>
 
       <label>Tuesday :</label>
-      <input type="text" value={tbreakfast} onChange={(e) => setTbreakfast(e.target.value)} />
+      <input type="text" value={tbreakfast} onChange={(e) => setTbreakfast(e.target.value)} className='in' />
 
       <label>Wednesday :</label>
-      <input type="text" value={wbreakfast} onChange={(e) => setWbreakfast(e.target.value)} />
+      <input type="text" value={wbreakfast} onChange={(e) => setWbreakfast(e.target.value)} className='in'/>
 
       <label>Thursday : </label>
-      <input type="text" value={thbreakfast} onChange={(e) => setThbreakfast(e.target.value)} />
+      <input type="text" value={thbreakfast} onChange={(e) => setThbreakfast(e.target.value)} className='in'/>
 
       <label>Friday :</label>
-      <input type="text" value={fbreakfast} onChange={(e) => setFbreakfast(e.target.value)} />
+      <input type="text" value={fbreakfast} onChange={(e) => setFbreakfast(e.target.value)} className='in'/>
 
       <label>Saturday :</label>
-      <input type="text" value={sbreakfast} onChange={(e) => setSbreakfast(e.target.value)} />
+      <input type="text" value={sbreakfast} onChange={(e) => setSbreakfast(e.target.value)} className='in'/>
 
       <label>Sunday :</label>
-      <input type="text" value={subreakfast} onChange={(e) => setSubreakfast(e.target.value)} />
+      <input type="text" value={subreakfast} onChange={(e) => setSubreakfast(e.target.value)} className='in'/>
 
     </div>
 
     <div className='meal-column'>
-      <h3>Lunch</h3>
+      <h3 className='meal-time'>Lunch</h3>
       
       <label>Monday :</label>
-      <input type="text" value={mlunch} onChange={(e) => setMlunch(e.target.value)} />
+      <input type="text" value={mlunch} onChange={(e) => setMlunch(e.target.value)} className='in'/>
 
       <label>Tuesday :</label>
-      <input type="text" value={tlunch} onChange={(e) => setTlunch(e.target.value)} />
+      <input type="text" value={tlunch} onChange={(e) => setTlunch(e.target.value)} className='in'/>
 
       <label>Wednesday :</label>
-      <input type="text" value={wlunch} onChange={(e) => setWlunch(e.target.value)} />
+      <input type="text" value={wlunch} onChange={(e) => setWlunch(e.target.value)} className='in'/>
 
       <label>Thursday : </label>
-      <input type="text" value={thlunch} onChange={(e) => setThlunch(e.target.value)} />
+      <input type="text" value={thlunch} onChange={(e) => setThlunch(e.target.value)} className='in'/>
 
       <label>Friday :</label>
-      <input type="text" value={flunch} onChange={(e) => setFlunch(e.target.value)} />
+      <input type="text" value={flunch} onChange={(e) => setFlunch(e.target.value)} className='in'/>
 
       <label>Saturday :</label>
-      <input type="text" value={slunch} onChange={(e) => setSlunch(e.target.value)} />
+      <input type="text" value={slunch} onChange={(e) => setSlunch(e.target.value)} className='in'/>
 
       <label>Sunday :</label>
-      <input type="text" value={sulunch} onChange={(e) => setSulunch(e.target.value)} />
+      <input type="text" value={sulunch} onChange={(e) => setSulunch(e.target.value)} className='in'/>
 
     </div>
   
     <div className='meal-column'>
-      <h3>Dinner</h3>
+      <h3 className='meal-time'>Dinner</h3>
       
-      <label>Monday :</label>
-      <input type="text" value={mdinner} onChange={(e) => setMdinner(e.target.value)} />
+      <div id='inner'>
+        <label>Monday :</label>
+        <input type="text" value={mdinner} onChange={(e) => setMdinner(e.target.value)} className='in'/>
 
-      <label>Tuesday :</label>
-      <input type="text" value={tdinner} onChange={(e) => setTdinner(e.target.value)} />
+        <label>Tuesday :</label>
+        <input type="text" value={tdinner} onChange={(e) => setTdinner(e.target.value)} className='in'/>
 
-      <label>Wednesday :</label>
-      <input type="text" value={wdinner} onChange={(e) => setWdinner(e.target.value)} />
+        <label>Wednesday :</label>
+        <input type="text" value={wdinner} onChange={(e) => setWdinner(e.target.value)} className='in'/>
 
-      <label>Thursday : </label>
-      <input type="text" value={thdinner} onChange={(e) => setThdinner(e.target.value)} />
+        <label>Thursday : </label>
+        <input type="text" value={thdinner} onChange={(e) => setThdinner(e.target.value)} className='in'/>
 
-      <label>Friday :</label>
-      <input type="text" value={fdinner} onChange={(e) => setFdinner(e.target.value)} />
+        <label>Friday :</label>
+        <input type="text" value={fdinner} onChange={(e) => setFdinner(e.target.value)} className='in'/>
 
-      <label>Saturday :</label>
-      <input type="text" value={sdinner} onChange={(e) => setSdinner(e.target.value)} />
+        <label>Saturday :</label>
+        <input type="text" value={sdinner} onChange={(e) => setSdinner(e.target.value)} className='in'/>
 
-      <label>Sunday Break:</label>
-      <input type="text" value={sudinner} onChange={(e) => setSudinner(e.target.value)} />
+        <label>Sunday Break:</label>
+        <input type="text" value={sudinner} onChange={(e) => setSudinner(e.target.value)} className='in'/>
+      </div>
 
     </div>
     <div className='meal-column'>
-      <h3>Snacks</h3>
+      <h3 className='meal-time'>Snacks</h3>
       
       <label>Monday :</label>
-      <input type="text" value={msnacks} onChange={(e) => setMsnacks(e.target.value)} />
+      <input type="text" value={msnacks} onChange={(e) => setMsnacks(e.target.value)} className='in'/>
 
       <label>Tuesday :</label>
-      <input type="text" value={tsnacks} onChange={(e) => setTsnacks(e.target.value)} />
+      <input type="text" value={tsnacks} onChange={(e) => setTsnacks(e.target.value)} className='in'/>
 
       <label>Wednesday :</label>
-      <input type="text" value={wsnacks} onChange={(e) => setWsnacks(e.target.value)} />
+      <input type="text" value={wsnacks} onChange={(e) => setWsnacks(e.target.value)} className='in'/>
 
       <label>Thursday : </label>
-      <input type="text" value={thsnacks} onChange={(e) => setThsnacks(e.target.value)} />
+      <input type="text" value={thsnacks} onChange={(e) => setThsnacks(e.target.value)} className='in'/>
 
       <label>Friday :</label>
-      <input type="text" value={fsnacks} onChange={(e) => setFsnacks(e.target.value)} />
+      <input type="text" value={fsnacks} onChange={(e) => setFsnacks(e.target.value)} className='in'/>
 
       <label>Saturday :</label>
-      <input type="text" value={ssnacks} onChange={(e) => setSsnacks(e.target.value)} />
+      <input type="text" value={ssnacks} onChange={(e) => setSsnacks(e.target.value)} className='in'/>
 
       <label>Sunday Break:</label>
-      <input type="text" value={susnacks} onChange={(e) => setSusnacks(e.target.value)} />
+      <input type="text" value={susnacks} onChange={(e) => setSusnacks(e.target.value)} className='in'/>
 
     </div>
     </div>

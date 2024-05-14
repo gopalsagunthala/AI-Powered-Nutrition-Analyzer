@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../dietplanner/DietPlanner.css';
 import axios from 'axios';
+import { RiCalendarScheduleLine } from "react-icons/ri";
 
 import DietPlanAdder from './DietPlanAdder';
 import DietPlanUpdater from './DietPlanUpdater';
@@ -43,17 +44,20 @@ const DietPlanner = () => {
   
 
   return (
-    <div className='dp'>
+    
+    <div className='background'>
+      <div className='dp'>
+      
+      
       <div className='add-plan'>
         <h2>Add new Diet-Plan : </h2>
-        <button onClick={()=>{setShowForm(!showForm);setShowEdit(false)}}>Add new</button>
+        <button onClick={()=>{setShowForm(!showForm);setShowEdit(false)}} >Add new</button>
       </div>
       <br />
 
       {(showForm===true)?(<DietPlanAdder/>):null}
       {(showEdit===true)?<DietPlanUpdater prop={update_items}/>:null}
 
-      <h2>Your diet plan</h2><br />
       
       {(dietPlan !== null && dietPlan.length > 0) ? (
         dietPlan.map((item, index) => (
@@ -124,7 +128,8 @@ const DietPlanner = () => {
             </table>
           </div>
         ))
-      ):<h2>No diet plans have been created</h2>}
+      ):<h2 className='command'><RiCalendarScheduleLine /> No diet plans have been created</h2>}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Nutrition.css';
+import { FaArrowRightLong } from "react-icons/fa6";
+import { ImSpoonKnife } from "react-icons/im";
 
 const Nutrition = () => {
   const [food, setFood] = useState('');
@@ -33,36 +35,40 @@ const Nutrition = () => {
   }
 
   return (
-    <div className='nutrition_analysis'>
-      <h1 style={{color:'black'}}>Nutrition Analysis</h1>
-      <form onSubmit={handleFood}>
-        <label htmlFor="">Enter the Food</label>
-        <br /><br />
-        <input type="text" value={food} onChange={(e) => setFood(e.target.value)} />
-        <button type="submit">Get Nutrition</button>
-      </form>
-      {nutritionData.length > 0 && (
-        <div className="nutrition-info">
-          {nutritionData.map((item, index) => (
-            <div key={index}>
-              <h2>Nutrition Information for {item.name}</h2>
-              <ul>
-                <li>Serving Size (g): {item.serving_size_g}</li>
-                <li>Calories: {item.calories}</li>
-                <li>Carbohydrates Total (g): {item.carbohydrates_total_g}</li>
-                <li>Cholesterol (mg): {item.cholesterol_mg}</li>
-                <li>Fat Saturated (g): {item.fat_saturated_g}</li>
-                <li>Fat Total (g): {item.fat_total_g}</li>
-                <li>Fiber (g): {item.fiber_g}</li>
-                <li>Potassium (mg): {item.potassium_mg}</li>
-                <li>Protein (g): {item.protein_g}</li>
-                <li>Sodium (mg): {item.sodium_mg}</li>
-                <li>Sugar (g): {item.sugar_g}</li>
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
+    <div>
+      <div className='nutrition_analysis'>
+        <h1 style={{color:'black'}} className='title'>Nutrition Analysis</h1>
+        <form onSubmit={handleFood}>
+          <label htmlFor="input" className='lable'  id="username" name="username"></label>
+          <br /><br />
+          <input type="text" value={food} onChange={(e) => setFood(e.target.value)} className='food-input' placeholder="Enter the Food :"/>
+          <button type="submit" className='get-nutrition'>Get Nutrition</button>
+        </form>
+        {nutritionData.length > 0 && (
+          <div className="nutrition-info">
+            {nutritionData.map((item, index) => (
+              <div key={index}>
+                <h2>Nutrition Information for {item.name}</h2><br />
+                <ul className='nutrition-info-list'>
+                  <li><FaArrowRightLong /> Serving Size (g): {item.serving_size_g}</li><br />
+                  <li><FaArrowRightLong /> Calories: {item.calories}</li><br />
+                  <li><FaArrowRightLong /> Carbohydrates Total (g): {item.carbohydrates_total_g}</li><br />
+                  <li><FaArrowRightLong /> Cholesterol (mg): {item.cholesterol_mg}</li><br />
+                  <li><FaArrowRightLong /> Fat Saturated (g): {item.fat_saturated_g}</li><br />
+                  <li><FaArrowRightLong /> Fat Total (g): {item.fat_total_g}</li><br />
+                  <li><FaArrowRightLong /> Fiber (g): {item.fiber_g}</li><br />
+                  <li><FaArrowRightLong /> Potassium (mg): {item.potassium_mg}</li><br />
+                  <li><FaArrowRightLong /> Protein (g): {item.protein_g}</li><br />
+                  <li><FaArrowRightLong /> Sodium (mg): {item.sodium_mg}</li><br />
+                  <li><FaArrowRightLong /> Sugar (g): {item.sugar_g}</li><br />
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div className='image'></div>
+
     </div>
   );
 };

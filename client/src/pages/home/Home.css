@@ -1,9 +1,8 @@
-*{
+/* *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
-    /* text-transform: capitalize; */
     transition: all 0.2s linear;
 }
 .img {
@@ -11,30 +10,18 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("Food.jpg");
-    background-size:100%; /* Adjusted property */
+   
+    background-size:100%; 
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
 }
 
 
-/* .img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Food.jpg");
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-} */
-
 .navbar{
     display: flex;
     color: aliceblue;
-    /* background-color:rgb(71, 67, 67); */
+
 }
 .left{
     flex: 3;
@@ -52,7 +39,7 @@
 }
 .NagAnchor{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: large;
 }
 .body{
@@ -88,4 +75,95 @@
     font-size: 1.3rem;
     padding: .1rem;
 }
+.about{
+    margin-top: 20rem;
+}
+.feature1{
+    height: 700px;
+}
+.img-2{
+    background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./images/nutrition.jpeg);
+}
+ */
 
+ #desktop-nav, #hamburger-nav {
+    height: 90px; /* Adjust the height as needed */
+    border-bottom: 1px solid black;
+    /* Add other styles as needed */
+}
+ .outer {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg,rgb(255, 255, 255),rgb(249, 238, 153)); /* Change the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    width: 100%;
+    min-height: 100vh; /* Ensure full viewport height */
+    
+}
+.right{
+    margin-right: 25rem;
+}
+.left{
+    margin-left: 20rem;
+}
+.logo{
+    margin-right: 60rem;
+}
+.about {
+    height: auto; /* Remove fixed height to allow content to determine height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-around; /* Evenly distribute content horizontally */
+    border-top: 1px solid black;
+    height: 48rem;
+}
+.about {
+    height: auto; /* Remove fixed height to allow content to determine height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-around; /* Evenly distribute content horizontally */
+    border-top: 1px solid black;
+    height: 48rem;
+}
+.about {
+    height: auto; /* Remove fixed height to allow content to determine height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-around; /* Evenly distribute content horizontally */
+    border-top: 1px solid black;
+    height: 50rem;
+}
+.about-right {
+    flex: 1; /* Take up 1/3 of the available space */
+    padding: 1rem; /* Add padding for spacing */
+    margin-left: 5rem;
+}
+.about-left {
+    flex: 1; /* Take up 1/3 of the available space */
+    padding: 1rem; /* Add padding for spacing */
+}
+.about-image{
+    border: 1px solid black;
+}
+.about-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+.about-content{
+    font-size: 25px;
+    /* padding:10px; */
+}
+.start-button{
+    min-width: 180px;
+    min-height: 40px;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.start-button:hover{
+    color: aliceblue;
+}

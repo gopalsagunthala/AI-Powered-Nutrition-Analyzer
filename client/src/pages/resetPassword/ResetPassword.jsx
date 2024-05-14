@@ -2,6 +2,7 @@ import React from 'react'
 import {useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
+import './ResetPassword.css'
 
 const ResetPassword = () => {
     const navigate=useNavigate();
@@ -29,18 +30,20 @@ const ResetPassword = () => {
     }
 
   return (
-    <div className='resetPassword'>
+    <div className='all'>
       
-      <form className='resetPassword-form' onSubmit={handleSubmit}>
-      
-        <center><h2>Reset Password</h2></center><br />
+      <div className='reset'> 
+        <form className='resetPassword-form' onSubmit={handleSubmit}>
         
-        <label htmlFor="">Email :</label>
-        <input type="email" required placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} autoComplete='off' />
-        
-        {errorMsg?(<center><br></br><p style={{color:'red'}}>{errorMsg}</p></center>):""}    
-        <br />  <button type='submit'>send link</button>
-      </form>
+          <center><h2>Reset Password</h2></center><br />
+          
+          <label htmlFor="">Email :</label>
+          <input type="email" required placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} autoComplete='off' />
+          
+          {errorMsg?(<center><br></br><p style={{color:'red'}}>{errorMsg}</p></center>):""}    
+          <br />  <button type='submit'>send link</button>
+        </form>
+      </div>
     </div>
   )
 }
