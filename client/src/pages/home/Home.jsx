@@ -4,9 +4,14 @@ import './style.css'
 import './mediaqueries.css'
 import { FiArrowRightCircle  } from "react-icons/fi";
 import Footer from '../../components/footer/Footer.jsx'
-import img1 from './images/Food.jpg'
+import img1 from './images/Food.jpeg'
 import analyzer from './images/Analyzer.png'
 import Dietplan from './images/Dietplan.png'
+import Tracker from './images/Tracker.png'
+import Diet from './images/Diet.png'
+import { GoNorthStar } from "react-icons/go";
+
+
 
 const Home = () => {
 
@@ -32,60 +37,77 @@ const Home = () => {
           </ul>
         </div>
       </nav>
-      <nav id="hamburger-nav">
-        <div className="logo">
-          <div className="img-container"><img src="./assets/S.jpeg" alt=""/></div>
-          <p className="iva">NutriVision</p>
-        </div>
-        <div className="hamburger-menu">
-          <div className="hamburger-icon" onClick={()=>toggleMenu()}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className="menu-links">
-            <li><a href="#about" onClick={()=>toggleMenu()}>About</a></li>
-            <li><a href="#experience" onClick={()=>toggleMenu()}>Experience</a></li>
-            <li><a href="#projects" onClick={()=>toggleMenu()}>Projects</a></li>
-            <li><a href="#contact" onClick={()=>toggleMenu()}>Contact</a></li>
-          </div>
-        </div>
-      </nav>
       <div className="outer">
         <div className="left">
-        <h1 className="">NutriVision</h1><br />
-        <h2 className="">AI Powered Nutrition Analyser.</h2>
-
+            <img src={img1} alt="profile picture" />
+            <center>
+            
+              <div className='more-content'>
+              <h4 >Know more about Nutrivision on here...</h4>
+              </div>
+            </center>
         </div>
         <div className="right">
-        <button className='start-button'><strong><a href="/signup">Get Start..!</a></strong></button>
-
+          <div className='content-home'>
+            <h1 className="">NutriVision</h1><br />
+            <h2 className="middle-text">AI Powered Nutrition Analyser.</h2><br /><br />
+            <button className='start-button'><strong><a href="/signup">Get Start..!</a></strong></button>
             
+          </div>
         </div>
       </div>
-      <div className='about' id='details'>
-        <div className='about-right'>
-          <h3 className='about-content'>"Discover the nutritional content of any food by simply entering its name! Uncover the secrets hidden in your favorite dishes."</h3>
+      <center><h4 className='title-about' id='details'>Nutrition Analysis</h4></center>
+      <div className='about1' >
+        <div className='about-right1'>
+          <div className='about-content1'>
+            <h3 >"Discover the nutritional content of any food by simply entering its name! Uncover the secrets hidden in your favorite dishes."
+            </h3><br />
+            <ul className='analysis-access'>
+              <li >What need to access this..!</li><br />
+              <li className='acess-1'><GoNorthStar /> Create accout..</li><br />
+              <li className='acess-1'><GoNorthStar /> Go to nutrition analysis </li><br />
+              <li className='acess-1'><GoNorthStar /> Then enter the food name.</li><br />
+            </ul>
+          </div>
         </div>
-        <div className='about-left'>
+        <div className='about-left1'>
           <img src={analyzer} alt="profile picture" className='about-image'/>
         </div>
         
       </div>
-      <div className='about'>
-        <div className='about-right'>
+      <center><h4 className='title-about' id='details'>Diet Plan</h4></center>
+      <div className='about2'>
+        <div className='about-right2'>
           <img src={Dietplan} alt="profile picture" className='about-image'/>
         </div>
-        <div className='about-left'>
-          <h3 className='about-content'>"Tailor your path to wellness with our personalized diet planner! Craft a roadmap to your health goals, one meal at a time."</h3>
+        <div className='about-left2'>
+          <h3 className='about-content2'>"Tailor your path to wellness with our personalized diet planner! Craft a roadmap to your health goals, one meal at a time."</h3>
         </div>
       </div>
-      <div className='about'>
-        <div className='about-right'>
-          <h3 className='about-content'>"Track your journey to better health with our seamless diet tracker. Effortlessly monitor your nutrition and stay on course to your wellness goals."</h3>
+      <center><h4 className='title-about' id='details'>Nutrition Analysis</h4></center>
+      <div className='about3'>
+        <div className='about-right3'>
+          <h3 className='about-content3'>"Track your journey to better health with our seamless diet tracker. Effortlessly monitor your nutrition and stay on course to your wellness goals."</h3>
         </div>
-        <div className='about-left'>
-          <img src={analyzer} alt="profile picture" className='about-image'/>
+        <div className='about-left3'>
+          <img src={Tracker} alt="profile picture" className='about-image' id='track'/>
+        </div>
+      </div>
+      <center><h4 className='title-about' id='details'>Nutrition Articles</h4></center>
+      <div className='about4'>
+        <div className='about-right4'>
+          <img src={Diet} alt="profile picture" className='about-image'/>
+        </div>
+        <div className='about-left4'>
+          <div className='about-content4'>
+            <h3 >"Tailor your path to wellness with our personalized diet planner! Craft a roadmap to your health goals, one meal at a time."</h3>
+            <br /><br />
+            <ul>
+              <li><GoNorthStar /> You can read all the article</li>
+              <li><GoNorthStar /> Apply those knowledge in your meal and workout session.</li>
+            </ul>
+          </div>
+          
         </div>
       </div>
       <Footer/>

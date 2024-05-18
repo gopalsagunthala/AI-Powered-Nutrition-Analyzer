@@ -9,6 +9,7 @@ import Signin from './pages/signin/Signin';
 import Home from './pages/home/Home';
 import ResetPassword from './pages/resetPassword/ResetPassword';
 import NewPassword from './pages/resetPassword/NewPassword';
+import Static from './pages/Diets/Static';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function AppContent() {
         <Route path='/nutrition' element={<Nutrition/>}> </Route>
         <Route path='/dietplanner' element={<DietPlanner/>}> </Route>
         <Route path='/model' element={<CalorieTracker/>}></Route>
+        <Route path='/diets' element={<Static/>}></Route>
       </Routes>
     </>
   );

@@ -24,6 +24,8 @@ const Landing = () => {
         <a href="/dietplanner"><button className='button-2'>Diet Plans</button></a>
         <br />
         <a href="/model"><button className='button-3'>Predict calorie</button></a>
+        <br />
+        <a href="/diets"><button className='button-3'>Diets</button></a>
       </div>
     </div>
   )
